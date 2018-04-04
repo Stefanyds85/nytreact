@@ -6,13 +6,12 @@ module.exports = function (passport) {
 	//add any API routes here
 
 	// Matches with "/api/article"
-	router.route("/")
+	router.route("/api/article")
 	.get(articleController.findAll)
-	.post(articleController.create);
+	
 
 	// Matches with "/api/books/:id"
-	router
-	.route("/:id")
+	router.route("/api/article")
 	.get(articleController.findById)
 	.put(articleController.update)
 	.delete(articleController.remove);
